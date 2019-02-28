@@ -1353,8 +1353,7 @@ void TASServer::JoinBattle(const int& battleid, const std::string& password)
 	}
 
 	if ((battle->GetEngineName() == "spring") && (battle->GetEngineVersion() == "98.0")) {
-		wxLogError("Spring 98.0 is broken, refusing to join battle");
-		return;
+		wxLogInfo("Spring 98 check removed, just proceed");
 	}
 
 	if ((battle->GetNatType() == NAT_Hole_punching) || (battle->GetNatType() == NAT_Fixed_source_ports)) {
